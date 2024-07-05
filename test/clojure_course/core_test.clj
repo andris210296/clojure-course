@@ -16,3 +16,13 @@
     (is (= 0 (taxa-de-entrega 1000)))))
 
 
+(deftest imposto-retido-fonte-test
+  (testing "Given a value over 1000 reais then shouldn't have tax discount"
+    (is (= 0 (imposto-retido-fonte 1)))
+    (is (= 0 (imposto-retido-fonte 999.99))))
+  (testing "Given a value equal or over 1000 reais then should have 10% tax discount"
+    (is (= 100.00 (imposto-retido-fonte 1000)))
+    (is (= 1000.00 (imposto-retido-fonte 10000)))))
+
+
+
