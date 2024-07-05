@@ -303,3 +303,16 @@
        (map :nome)
        (map upper-case)
        (join ", ")))
+
+(defn- calcula-imc
+  [peso altura]
+  (/ peso (* altura altura)))
+
+(defn imc-check
+  [weight height]
+  (let [imc (calcula-imc weight height)]
+    (if (< imc 18.5)
+      :baixo-peso
+      (if (< imc 24.9)
+        :normal
+        :sobrepeso))))

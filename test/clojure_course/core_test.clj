@@ -25,4 +25,12 @@
     (is (= 1000.00 (imposto-retido-fonte 10000)))))
 
 
+(deftest imc-check-test
+  (testing "Uma pessoa muito magra deve ter um IMC baixo"
+    (is (= :baixo-peso (imc-check 1 2))))
+  (testing "Uma pessoa com peso ideal deve ter IMC ideal"
+    (is (= :normal (imc-check 70 1.70))))
+  (testing "Uma pessoa com sobrepeso deve ter IMC acima do normal"
+    (is (= :sobrepeso (imc-check 80 1.70)))))
+
 
