@@ -1,4 +1,4 @@
-(ns clojure-course.core
+(ns clojure-course.course1.course1
   (:require [clojure.string :refer [upper-case join]]))
 
 (defn foo

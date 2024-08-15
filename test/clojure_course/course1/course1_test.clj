@@ -1,6 +1,6 @@
-(ns clojure-course.core-test
+(ns clojure-course.course1.course1-test
   (:require [clojure.test :refer :all]
-            [clojure-course.core :refer :all]))
+            [clojure-course.course1.course1 :refer :all]))
 
 
 
