@@ -1,4 +1,4 @@
-(ns clojure-course.course6.login-test
+(ns clojure-course.course6.logic-test
   (:use clojure.pprint)
   (:require [clojure.test :refer :all]
             [clojure-course.course6.logic :refer :all]
